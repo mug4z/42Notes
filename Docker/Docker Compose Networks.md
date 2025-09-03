@@ -1,3 +1,12 @@
+---
+id: Docker Compose Networks
+aliases: []
+tags:
+  - Docker
+  - compose
+  - network
+---
+
 [[Docker compose]]
 
 Network make sure that a container can communicate with other container.
@@ -41,4 +50,3 @@ networks:
 ## Sources
 [[Docker - Sources]]
 
-#Docker #compose #network
