@@ -1,0 +1,2 @@
+- `<` redirige la stdin depuis un fichier au lieux du clavier
+- `>` redirige la stdout dans un fichier.

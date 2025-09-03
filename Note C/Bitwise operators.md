@@ -1,0 +1,6 @@
+- & (AND)
+- | (OR) 
+- ^ (XOR)
+- <<  (left shift)
+- >> (right shift)
+- ~ (NOT)
