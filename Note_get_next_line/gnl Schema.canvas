@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"055fde32fbf85761","type":"text","text":"OUT","x":-173,"y":80,"width":250,"height":60,"color":"2"},
+		{"id":"c0d522022f6b55f1","type":"text","text":"IN (file descriptor)","x":-200,"y":-820,"width":250,"height":60,"color":"3"}
+	],
+	"edges":[]
+}

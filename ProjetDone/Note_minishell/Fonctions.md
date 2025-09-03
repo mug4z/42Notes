@@ -1,0 +1,73 @@
+- **Readline** : read a line from the terminal and returns it.
+	- Doc: https://tiswww.case.edu/php/chet/readline/readline.html#Command-Line-Editing
+- **add_history** : add to the history of command passed, you can access it with arrow keys.
+	- Doc : https://tiswww.case.edu/php/chet/readline/history.html#History-List-Management
+- **rl_clear_history**
+	- brew install readline.
+			- Essayer de faire des sym link dans `/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/readline` pour l'include avec <> -> NOK permdenied.
+			- 
+	- Clear the histroty list, differ from clear_history because it frees private data Readline saves in the history list.
+	- https://tiswww.case.edu/php/chet/readline/readline.html#Miscellaneous-Functions
+## File and directory operations 
+- **stat**: Get informations about a file, like the size, the last time modification,time of the last access, etc.
+	- Don't need read write execution permsion on the file. But the path must be searchable.
+- **lstat** : Same as stat, exept for symbolic link. Lstat get information about the link while the stat function get information about the file the link references.
+	- For symbolic link the st_size contains the lenght of the pathname of the link.
+- **fstat**: obtain information about an open file, with the file descriptor.
+- **opendir**: Open a directory and get information in a DIR struct.
+- **readdir** :  returns a pointer to the next directory/files entries
+	- Return NULL if error with malloc or no more directories/files to read.
+	- The order "Note that the order of the directory entries vended by readdir() is not specified.  Some filesystems may return entries in lexicographic sort
+     order and others may not"
+ - **closedir** : Close the directory stream, and frees the structure
+	 - return =0 if ok, -1 if nok
+ - **chdir** : The named directories become the current working directory. -> utile pour `cd`
+ - **getcwd** : Get the current working directory  in form of an absolute path.
+	 - Return: if successfull  A pointer to the path name is returned, if not a null pointer is returned and the errno value is updated.
+ - **unlink**: Unlink files (delete them)
+	 - Return : If ok -> 0 , If Nok -> -1 and set the errno 
+	 - If the path given to unlink is a symbolic link only the symbolic link is removed not the files pointed by the link.
+ - **wait4** : Like waitpid expect that it return a struct rusage given in arguments.
+ - **wait3** : Like wait expect that it return a struct rusage given in arguments.
+ - **kill** : Send to the pid a SIG
+	 - If pid = 0 send to all process the parent have access to.
+## Terminal Handling 
+- **isatty** : test if a fd is assiciated with a terminal device.
+	- Return : Yes -> 1 No -> 0 and change the errno.
+- **ttyname** : Return the name of the device where isatty is true
+	- Return : 
+		- If OK -> A string that  represent the name of the device.
+		- If NOK -> null.
+- **ttylsot** : Return the slot of the current user's terminal ins some file.
+- **ioctl** : It is used to manipulate the underlying device parameters (terminal)
+	- Some of  the macro used as parameters are in ttycom.h 
+	- Exemple `#define TIOCGWINSZ _IOR('t', 104, struct winsize)`
+		- Name TIOCGWINSZ, get the terminal size
+		- Return value struct winsize
+	- Note: There is a lot to cover with this function for now I understand little.
+- **tcgetattr**: Get the terminal attributes.
+- **tcsetattr** : Set the terminal attributes.
+## Terminal Capabilities
+Capability values can be numeric, boolean (capability is either present or absent) or strings. Any particular capability always has the same value type; for example, `co` always has a numeric value, while `am' (automatic wrap at margin) is always a flag, and`cm (cursor motion command) always has a string value. The documentation of each capability says which type of value it has.
+- **tgetent** : Set the descriptions for interogations.
+	- This function finds the description and remembers it internally so that you can interrogate it about specific terminal capabilities.
+	- https://www.gnu.org/software/termutils/manual/termcap-1.3/html_chapter/termcap_2.html#SEC4
+- **tgetnum** : Take a string that represent a terminal capabilities.
+	- Used to get capability that is numeric.
+	- Return: The numeric entry for the terminal capabilities .
+	- [Definition of terminal capabilities](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_chapter/termcap_2.html#SEC4)
+- **tgetflag**: 
+	- Used to get a boolean value.
+	- [Definition of terminal capabilities](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_chapter/termcap_2.html#SEC4)
+- **tgetstr**:
+	- Return: A pointer to a string which is the capability value.
+	- Use to get string value.
+	- [Definition of terminal capabilities](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_chapter/termcap_2.html#SEC4)
+- **tgoto**: Used to generated a cursor motion string.
+	- Take a string, col and line postion.
+- **tputs**:
+	- 
+## Environement
+- **getenv** : Obtain the current value of the environement variable given in arguments.
+	- Return : A null terminated string. If the environement variable is not in the current environement NULL is returned.
+	- NOTE: The application should not modifiy the string returned by getenv.

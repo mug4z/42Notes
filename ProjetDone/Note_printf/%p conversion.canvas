@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"3f2c21a93206c82e","type":"text","text":"argument must be void *","x":-740,"y":-1100,"width":250,"height":60},
+		{"id":"d5c85051d8da82c6","type":"text","text":"%p : ","x":-518,"y":-1380,"width":151,"height":50,"color":"5"},
+		{"id":"ac180871302739c1","type":"text","text":"0x[Hexadecimal number]","x":-400,"y":-1100,"width":250,"height":60},
+		{"id":"b93a92fa307a4bbf","type":"text","text":"Convertir le chiffre en long -> OK","x":-400,"y":-1000,"width":250,"height":60},
+		{"id":"a6b3463fc4926524","type":"text","text":"- Write (0x)\n- Convertir le chiffre en hexa et afficher le resultat de chaque etape de la conversion.","x":-410,"y":-880,"width":270,"height":140}
+	],
+	"edges":[
+		{"id":"1437d1cdf0b57af6","fromNode":"d5c85051d8da82c6","fromSide":"bottom","toNode":"3f2c21a93206c82e","toSide":"top","color":"3","label":"In"},
+		{"id":"891cccf539a2e6d9","fromNode":"d5c85051d8da82c6","fromSide":"bottom","toNode":"ac180871302739c1","toSide":"top","color":"2","label":"Out"},
+		{"id":"81d3ea5285f99bb0","fromNode":"ac180871302739c1","fromSide":"bottom","toNode":"b93a92fa307a4bbf","toSide":"top"},
+		{"id":"d1104beac99eeea7","fromNode":"b93a92fa307a4bbf","fromSide":"bottom","toNode":"a6b3463fc4926524","toSide":"top"}
+	]
+}

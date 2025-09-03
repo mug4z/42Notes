@@ -1,0 +1,11 @@
+- isalpha -> verifie si c'est une lettre maj/min
+- isdigit -> verifie si c'est une chiffre entre 0 et 9
+- isalnum -> verifie si c'est une lettre Aa-Zz ou chiffre 0-9
+- isascii -> verifie que c'est dans la table ascii utf8 0-127
+- isprint -> verifie que c'est un character printable de 32-126
+- strlen -> retourne la longueur d'une string
+- memset -> copie une certain character sur un certaine nombre de bytes sur un unsigned char
+- bzero -> copie '\0' sur une certaine longueur sur un unsigned char.
+- memcpy -> copie un certain nombre de byte d'une chaine a une autre.
+- memmove -> copie un certain nombre de byte d'une chaine a une autre. mais gere la memory overlap.
+- 

@@ -1,0 +1,1 @@
+Utiliser get next line pour lire depuis la standard input.

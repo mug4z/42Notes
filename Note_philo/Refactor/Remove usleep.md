@@ -1,0 +1,14 @@
+- [x] Add the begin state in the philo struct
+- [x] init the begin state.
+- [x] Make a function update state.
+	- [x] Update the begin state
+	- [x] change the philo.state.
+- [ ] When begining the function of the state.
+	- [ ] eat 
+		- [ ] check the current beginig 
+	- [ ] sleep
+	- [ ] think
+- [ ] Make a function is_dead
+	- [ ] IN -> PHILO
+	- [ ] check the last_meal time and if it is equal or superior to TIME_TO_DIE, change the status to die.
+	- [ ] OUT -> 0 if not dead 1 if dead
