@@ -42,7 +42,7 @@ tags: []
 - [ ] Ajouter un super user pour l'admin
 
 ### Mariadb
-- [ ] Voir quelle commande est lancer en PID 1
+- [X] Voir quelle commande est lancer en PID 1
 - [ ] SELECT user_login FROM wp_users; -> voir si les user sont bien en database.
 - Dans le code du docker-entrypoint.sh
   - docker_process_init_files() 
