@@ -43,6 +43,12 @@ tags: []
 
 ### Mariadb
 - [ ] Voir quelle commande est lancer en PID 1
+- [ ] SELECT user_login FROM wp_users; -> voir si les user sont bien en database.
+- Dans le code du docker-entrypoint.sh
+  - docker_process_init_files() 
+  - docker_process_sql() -- run the sql 
+  - docker_exec_client() -- call the client to run the sql
+
 
 ## Verifier la bonne tenue du projet
 - les data son persistante sur la VM 
