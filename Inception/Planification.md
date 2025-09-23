@@ -38,26 +38,27 @@ tags: []
 - [X] Voir quelle commande est lancer en PID 1
 - [X] Ajouter la config avec le container 
 - [X] Bien changer le volume partager avec wordpress et NGINX
-- [ ] Ameliorer le script de lancement
-- [ ] Ajouter un super user pour l'admin
+- [X] Ameliorer le script de lancement
+- [X] Ajouter un user non admin
+  - wp user create
 
 ### Mariadb
 - [X] Voir quelle commande est lancer en PID 1
-- [ ] SELECT user_login FROM wp_users; -> voir si les user sont bien en database.
+- [X] SELECT user_login FROM wp_users; -> voir si les user sont bien en database.
+- Execute le test.sql directement dans mariadb -- mariadb -uroot -pYOLO --database=$SQL_DATABASE_NAME < test.sql 
 - Dans le code du docker-entrypoint.sh
   - docker_process_init_files() 
   - docker_process_sql() -- run the sql 
   - docker_exec_client() -- call the client to run the sql
 
-
-## Verifier la bonne tenue du projet
-- les data son persistante sur la VM 
-- si un container crash il es redemarer automatiquement
-
-### Tous les user sont creer
-
 ### Check la disponibiliter des container
 - healthcheck:
-  1. mariadb
-  2. wordpress
-  3. nginx
+  1. mariadb -> OK
+
+## Verifier la bonne tenue du projet
+- [ ] les data son persistante sur la VM 
+- [ ] si un container crash il es redemarer automatiquement
+- [ ] Tous les user sont creer 
+- [ ] Le nom de domaine est le bon
+- [ ] *UPLOAD* SUR LE GIT DE 42
+
