@@ -1,3 +1,10 @@
+---
+id: Standard Template Library (STL)
+aliases: []
+tags:
+  - cpp
+---
+
 - [ ] Voir plus en details:
 	- [x] les vector
 	- [x] les list
@@ -83,6 +90,7 @@ std::cout << "List pop first element" << std::endl;
 my_list.pop_front();
 std::cout << "List capacity in elements:" << my_list.size() << std::endl;
 ```
+
 #### Deque
 A double-ended queue allowing insertion and deletetion on both ends.
 ```cpp
