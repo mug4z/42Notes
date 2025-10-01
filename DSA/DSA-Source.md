@@ -9,7 +9,8 @@ tags: []
 ## Data Structure
 
 Introduction to algorithme 4th edition
-
+## Algorithms
+[Video series on algorithms - Abdul Bari](https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
 ## Matrix
 ### Sparse Matrix
 
