@@ -1,7 +1,9 @@
 ---
 id: DSA-Source
 aliases: []
-tags: []
+tags:
+  - DSA
+  - Source
 ---
 
 # DSA-Sources
