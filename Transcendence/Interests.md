@@ -1,0 +1,20 @@
+0 least interest -> 5 Major interest.
+- Backend :
+	- Major :(fastify and Node.js) : 5 
+	- Minor: SQLite for the database. : 5
+- User management ?
+	- Major: OAuth 2.0 4
+- Gameplay and user exp
+	- Remote players: 2 
+	- Another game, very interesting but realy ?: 4 
+	- Live chat.: 2 
+- AI-Algo
+	- Introduce AI opponent : 3
+- Cybersecurity:
+	- Major: Waf/ModSecurity/ HashiCorp: 5 
+	- Major: 2FA and JWT:  4
+- Backend:
+	- Major: Backend as microservices.: 3 
+- Server-side pong
+	-  Major : Replace Basic Pong with Server-Side Pong and Implementing an API. : 4
+- 7 major modules is required minimum.
