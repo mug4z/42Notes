@@ -11,6 +11,7 @@
 - [ ] Read some part of the handbook.
 - [ ] Read some javascript.
 - [ ] What the fuck is SQLLite.
+- [ ] Package.json and use of npm
 
 ### Front End
 
@@ -19,12 +20,15 @@
 - [ ] faire un bouton qui demande un chiffre aleatoire
 
 ### BackEnd
-
+- [ ] access in service the test server through the port 3000
+	- [ ] Check fastify server listen
 - [ ] setup la base de donner. (SQLLIte)
-- [ ]  Install avec npm https://www.npmjs.com/package/sqlite
-	 - [ ] Setup la DB (creer la table numbers dans la DB PROTO)
+	- [ ]  Install avec npm https://www.npmjs.com/package/sqlite
+	 - [ ] Setup la DB (creer la table numbers dans la DB PROTO).
+	 - [ ] Regarde avec fastify pour faire le backend.
 - [ ] faire une mini api pour aller checher un nombre et ajouter un nombre.
 - [ ] setup fastify
+	- [ ] setup the nodemon for hotreload
   - [ ] Setup le docker
   - [ ] connexion a la DB
 - [ ] setup la connexion avec la base de donner
