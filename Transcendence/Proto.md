@@ -20,6 +20,7 @@
 - [ ] faire un bouton qui demande un chiffre aleatoire
 
 ### BackEnd
+- [ ] Setup the reverse proxy for backend.
 - [ ] access in service the test server through the port 3000
 	- [ ] Check fastify server listen
 - [ ] setup la base de donner. (SQLLIte)
