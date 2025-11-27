@@ -20,16 +20,15 @@
 - [ ] faire un bouton qui demande un chiffre aleatoire
 
 ### BackEnd
-- [ ] Setup the reverse proxy for backend.
-- [ ] access in service the test server through the port 3000
-	- [ ] Check fastify server listen
+- [x] Setup the reverse proxy for backend.
+- [x] access in service the test server through the port 3000
+	- [x] Check fastify server listen
 - [ ] setup la base de donner. (SQLLIte)
-	- [ ]  Install avec npm https://www.npmjs.com/package/sqlite
-	 - [ ] Setup la DB (creer la table numbers dans la DB PROTO).
+	- [x]  Install avec npm https://www.npmjs.com/package/better-sqlite3
+	 - [x] Setup la DB (creer la table numbers dans la DB PROTO).
 	 - [ ] Regarde avec fastify pour faire le backend.
 - [ ] faire une mini api pour aller checher un nombre et ajouter un nombre.
+	- [ ] addNbr
+	- [ ] getNbr
 - [ ] setup fastify
-	- [ ] setup the nodemon for hotreload
-  - [ ] Setup le docker
-  - [ ] connexion a la DB
-- [ ] setup la connexion avec la base de donner
+	- [x] setup the nodemon for hotreload
