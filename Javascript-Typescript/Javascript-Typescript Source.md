@@ -25,3 +25,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 [Typescriptlang unknown - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type)
 [Typescriptlang Any - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any)
 [Typescriptlang never - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)
+## const assertions
+[Typescriptlang const assertions - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions)
+
+## non null assertions
+[Typescriptlang - le le 03.12.2025](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
+
+## satiesfies
+[Typescriptlang satiesfies - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#the-satisfies-operator)
+[What are the differences Between TypeScript’s satisfies operator and type assertions? - lue le 03.12.2025](https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert)

@@ -1,4 +1,4 @@
-## Javascript types
+## JavaScript types
 [[Javascript - Data Types]]
 
 ## Primitive
@@ -138,5 +138,10 @@ function infiniteLoop(): never {
   while (true) {}
 }
 ```
+
+Also we have 
+[[Typescript - Assertions]]
 # Source
 [[Javascript-Typescript Source]]
+
+#Typescript #DataType 
