@@ -1,5 +1,8 @@
 You can use Typescript code in JavaScript projects and vice versa.
 The @types/
+
+## Type 
+Typescript 
 ## Basic logic  for execution
 Because typescript is not understood by browser you need to do these step.
 1. Write typescript code .

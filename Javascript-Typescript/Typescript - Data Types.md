@@ -1,3 +1,23 @@
+
+## Type Inference
+It just means that typescript can automatically determine the type of a variable based on the value assigned to it
+```Typescript
+let name = "Ouioui";
+```
+## Type Compatibility
+Two types are considered compatible if they have the same structure, regardless of their names.
+```typescript
+interface Point {
+  x: number;
+  y: number;
+}
+
+let p1: Point = { x: 10, y: 20 };
+let p2: { x: number; y: number } = p1;
+
+console.log(p2.x); // Output: 10
+```
+`p1` and `p2` are not of the same type, but they are compatible because they have the same structure.
 ## JavaScript types
 [[Javascript - Data Types]]
 
@@ -141,6 +161,8 @@ function infiniteLoop(): never {
 
 Also we have 
 [[Typescript - Assertions]]
+
+
 # Source
 [[Javascript-Typescript Source]]
 
