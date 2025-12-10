@@ -4,6 +4,7 @@
 - spec: generer nombre aleatoire -> button: fetch/add -> DB (table "Nombre") => (deux pages web: add / fetch (display))
 - potentiellement: restreindre l'acces des pages: placeholder (auth / login) / boolean
 
+- [ ] Continue the explication with the design pattern and architectures.
 ## Step
 
 ## Recherche
