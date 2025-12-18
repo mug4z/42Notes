@@ -18,3 +18,5 @@ TODO
 - Mettre le .env dans le docker 
 ## Fichier de config
 
+Le chemin vers la db de prisma doit etre absolue. Dans le .env
+
