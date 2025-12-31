@@ -124,7 +124,41 @@ php artisan make:migration create_job_listings_table
 ```bash
 php artisan migrate
 ```
+## Eloquent
+Converting a class to a Eloquent model
 
+```php
+use Illuminate\Database\Eloquent\Model;
+
+class Job extends Model
+{
+    // Your model code here
+}
+```
+By default, Eloquent expects the table name to be the plural snake_case of the model name (`jobs` for `Job`).
+If your table has a different name, specify it in the model:
+```php
+protected $table = 'job_listings';
+```
+You can retrieve all records with `all()`, or find a specific record by ID with `find()`:
+
+Create a record
+```php
+Job::create([
+    'title' => 'Acme Director',
+    'salary' => '1000000',
+]);
+```
+However, Laravel protects against **mass assignment vulnerabilities** by requiring you to specify which attributes are mass assignable in your model:
+```php
+protected $fillable = ['title', 'salary'];
+```
+
+Laravel’s **Tinker** is a REPL (interactive shell) for your application:
+
+```bash
+php artisan tinker
+```
 # Sources
 [[PHP-Laravel Sources]]
 
