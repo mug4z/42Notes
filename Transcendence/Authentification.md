@@ -14,3 +14,7 @@ Voir comment on fait un plugin en typescript
 
 Problem was that the secret need to be a string but I;m trying to get the secret from env
 found solution there -> https://ssojet.com/jwt-validation/validate-jwt-using-hs512-in-fastify/
+
+## Register
+
+pbkdf2 -> https://mojoauth.com/hashing/pbkdf2-in-nodejs/
