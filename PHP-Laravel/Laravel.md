@@ -250,6 +250,105 @@ User::factory()->unverified()->create();
 ```
 
 You can define your own states, such as an `admin` state for users with administrative privileges.
+
+### Eloquent relationship
+
+
+Some common Eloquent relationship types include:
+
+- `belongsTo`: Defines an inverse one-to-one or many relationship (e.g., a job belongs to an employer).
+- `hasMany`: Defines a one-to-many relationship (e.g., an employer has many jobs).
+- `hasOne`
+- `belongsToMany`
+
+```php
+public function employer()
+{
+    return $this->belongsTo(Employer::class);
+}
+```
+
+Accessing related model
+```php
+$job = App\Models\Job::first();
+$employer = $job->employer; // Access as a property, not a method
+```
+
+In the `Employer` model, define the inverse relationship:
+
+```php
+public function jobs()
+{
+    return $this->hasMany(Job::class);
+}
+```
+
+This allows you to get all jobs for a given employer:
+
+```php
+$employer = App\Models\Employer::first();
+$jobs = $employer->jobs; // Returns a collection of Job models
+```
+
+### Pivot table and belongsToMany
+#### Job_tag pivot table.
+To connect jobs and tags, create a pivot table (commonly named by combining the singular forms of the related tables in alphabetical order, e.g., `job_tag`).
+
+The pivot table should include foreign ID columns for both `job_listing_id` and `tag_id`:
+
+```php
+$table->foreignId('job_listing_id')->constrained()->cascadeOnDelete();
+$table->foreignId('tag_id')->constrained()->cascadeOnDelete();
+$table->timestamps();
+```
+
+Note: Since your jobs table is named `job_listings`, specify the foreign key column as `job_listing_id` to avoid conflicts.
+#### Enforcing key constraint on mysql
+```sql
+PRAGMA foreign_keys = ON;
+```
+
+#### Defining the many-to-many relationship in models
+```php
+public function jobs(): BelongsToMany
+{
+        return $this->belongsToMany(Job::class, relatedPivotKey: 'job_listing_id');
+}
+
+public function tags(): BelongsToMany
+{
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
+}
+```
+
+#### Using reliationship
+You can access tags for a job:
+
+```php
+$job = Job::find(10);
+$tags = $job->tags; // Returns a collection of Tag models
+```
+
+Or access jobs for a tag:
+
+```php
+$tag = Tag::find(1);
+$jobs = $tag->jobs; // Returns a collection of Job models
+```
+#### Attach Related models
+To attach a tag to a job:
+
+```php
+$tag->jobs()->attach($jobId);
+```
+
+Note: When accessing the relationship as a property, you get a cached collection. To refresh and get the latest data, call the relationship as a method with `get()`:
+
+```php
+$tag->jobs()->get();
+```
+
 # Sources
 [[PHP-Laravel Sources]]
 
+#laravel #laracast #notes #php
