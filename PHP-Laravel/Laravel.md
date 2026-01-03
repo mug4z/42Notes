@@ -1,3 +1,4 @@
+Cool debuging -> https://github.com/barryvdh/laravel-debugbar
 
 # Laravel Base 
 - New project : `laravel new projectName`
@@ -346,6 +347,103 @@ Note: When accessing the relationship as a property, you get a cached collection
 
 ```php
 $tag->jobs()->get();
+```
+
+### Eager Loading and the N+1 Problem
+#### N+1 problem
+Problem when mutiple queries are done for small change, could be just one or fewer. 
+
+The N+1 problem occurs when lazy loading relationships inside a loop causes one query to fetch the main records (N), plus one additional query per related record, resulting in many queries and poor performance.
+
+For example, fetching 8 jobs and their employers results in 9 queries: 1 for jobs and 8 for employers.
+
+#### Fixing the N+1 Problem with Eager Loading
+
+Eager loading fetches related models in a single query upfront, reducing the number of queries.
+
+Modify your query to eager load the `employer` relationship:
+
+```php
+$jobs = Job::with('employer')->get();
+```
+
+This executes two queries regardless of the number of jobs: one for jobs and one for employers.
+#### Optional: Disabling Lazy Loading
+
+If you prefer to disable lazy loading entirely to catch unintended queries, you can do so in the `AppServiceProvider`:
+
+```php
+use Illuminate\Database\Eloquent\Model;
+
+public function boot()
+{
+    Model::preventLazyLoading(!app()->isProduction());
+}
+```
+
+This throws an exception whenever lazy loading occurs, helping you identify and fix N+1 issues during development.
+### Pagination
+Fetching thousands of records at once can overwhelm your server and browser. Pagination limits the number of records retrieved and displayed per page, improving performance and user experience.
+Replace your query like this:
+
+```php
+$jobs = Job::with('employer')->paginate
+```
+In your Blade view, render pagination links with:
+
+```blade
+{{ $jobs->links() }}
+```
+#### Customizing Pagination Views
+
+If you want to customize the pagination markup or use a different CSS framework like Bootstrap, publish the pagination views:
+
+```bash
+php artisan vendor:publish --tag=laravel-pagination
+```
+
+This copies the pagination views into your `resources/views/vendor/pagination` directory for editing.
+
+To switch the default pagination view (e.g., to Bootstrap 5), configure it in `AppServiceProvider`:
+
+```php
+use Illuminate\Pagination\Paginator;
+
+public function boot()
+{
+    Paginator::useBootstrapFive();
+}
+```
+#### Pagination style
+
+- ***Standard Pagination**: Shows page numbers and navigation links.
+- **Simple Pagination**: Shows only "Previous" and "Next" links, reducing query complexity.
+- **Cursor Pagination**: Uses a cursor (encoded string) for efficient pagination on large datasets but lacks direct page number navigation.
+
+Example for simple pagination:
+
+```php
+$jobs = Job::with('employer')->simplePaginate(3);
+```
+
+Example for cursor pagination:
+
+```php
+$jobs = Job::with('employer')->cursorPaginate(3);
+```
+
+#### ## How Pagination Queries Work
+
+Standard pagination uses SQL `LIMIT` and `OFFSET` to fetch the correct subset of records.
+
+Cursor pagination uses an encoded cursor to fetch records after a certain point, avoiding the performance cost of large offsets.
+### Database seeders
+Seeders are classes located in the `database/seeders` directory. The default `DatabaseSeeder` class is your entry point to run multiple seeders.
+
+To run seeders, use:
+
+```bash
+php artisan db:seed
 ```
 
 # Sources
