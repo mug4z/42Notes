@@ -446,6 +446,47 @@ To run seeders, use:
 php artisan db:seed
 ```
 
+#### Running seeders
+If you encounter errors like missing columns, ensure your seeders and factories match your database schema.
+
+You can combine migration and seeding in one command:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+This drops all tables, runs migrations, and seeds the database in one go.
+
+#### Using Factories in Seeders
+
+Seeders often use **factories** to generate large amounts of fake data quickly:
+
+```php
+\App\Models\Job::factory(200)->create();
+```
+
+This creates 200 job records using the factory definition.
+#### Splitting Seeders for Flexibility
+
+You can create multiple seeder classes for different parts of your database:
+
+```bash
+php artisan make:seeder JobSeeder
+```
+
+This allows running seeders individually or in groups, useful for testing or partial data refreshes.
+
+In your `DatabaseSeeder`, call other seeders:
+
+```php
+public function run()
+{
+    $this->call([
+        UserSeeder::class,
+        JobSeeder::class,
+    ]);
+}
+```
 # Sources
 [[PHP-Laravel Sources]]
 
