@@ -16,3 +16,9 @@ https://laravel.com/docs/12.x/blade
 
 
 https://stackoverflow.com/questions/14037290/what-does-or-mean-in-php#14037376
+
+### Csrf
+https://owasp.org/www-community/attacks/csrf
+
+### Validation rules
+https://laravel.com/docs/12.x/validation#available-validation-rules

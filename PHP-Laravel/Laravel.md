@@ -487,7 +487,96 @@ public function run()
     ]);
 }
 ```
-# Sources
+
+# Forms
+## Forms and CSRF
+Wildcard routes should go after specific routes.
+
+### Organise views
+Group related views in folders, e.g., place all job-related views in a `jobs` directory. Use common naming conventions:
+
+- `index.blade.php` for listing all jobs
+- `show.blade.php` for displaying a single job
+- `create.blade.php` for the form to create a job
+
+Use dot notation in views references, e.g., `'jobs.create'`.
+### Handling Form Submission
+
+By default, forms submit via GET to themselves. Change the form method to POST and set the action to `/jobs` to follow RESTful conventions for creating resources.
+
+Add a POST route for `/jobs` in your routes file to handle form submission
+### CSRF Protection
+
+Laravel protects against CSRF attacks by requiring a token in POST requests. Add the Blade directive `@csrf` inside your form to include a hidden token input.
+
+Without this, submitting the form results in a 419 error (page expired).
+### Accessing Request Data
+
+Use the `request()` helper to retrieve form data:
+
+```php
+$request->all(); // all form data
+$request->input('title'); // specific field
+```
+### Create records
+Create a new job record using Eloquent's `create()` method with the request data:
+
+```php
+Job::create([
+    'title' => $request->input('title'),
+    'salary' => $request->input('salary'),
+    'employer_id' => $employerId, // typically from authenticated user
+]);
+```
+
+Remember to include `employer_id` in your model's `$fillable` array or disable mass assignment protection accordingly.
+### Redirecting After Submission
+
+After creating the job, redirect the user back to the jobs listing page:
+
+```php
+return redirect('/jobs');
+```
+### See the latest change 
+Use the `latest` to see the latest data 
+
+```php
+$jobs = Job::with('employer')->latest()->simplePaginate(3);
+```
+## Always Validate. Never Trust the User.
+### Server-Side Validation
+
+Use Laravel's built-in validation method in your POST route:
+
+```php
+$request->validate([
+    'title' => ['required', 'min:3'],
+    'salary' => ['required'],
+]);
+```
+### Displaying Validation Errors
+
+In your Blade view, display errors globally:
+
+```blade
+@if ($errors->any())
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li class="text-red-500">{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+```
+Or display errors inline below each input using the `@error` directive:
+
+```blade
+@error('title')
+    <p class="text-red-500 text-sm">{{ $message }}</p>
+@enderror
+```
+### Client side validation
+Add the `required` attribute to inputs for instant browser validation, enhancing user experience.
+# Sources  
 [[PHP-Laravel Sources]]
 
 #laravel #laracast #notes #php
