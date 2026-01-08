@@ -576,6 +576,43 @@ Or display errors inline below each input using the `@error` directive:
 ```
 ### Client side validation
 Add the `required` attribute to inputs for instant browser validation, enhancing user experience.
+
+##  Editing, Updating, and Deleting a Resource
+### Updating 
+
+Add a PATCH route to handle form submissions for updates:
+
+```php
+Route::patch('/jobs/{id}', function (Request $request, $id) {
+    $request->validate([
+        'title' => 'required|min:3',
+        'salary' => 'required',
+    ]);
+
+    $job = Job::findOrFail($id);
+    $job->update([
+        'title' => $request->input('title'),
+        'salary' => $request->input('salary'),
+    ]);
+
+    return redirect("/jobs/{$id}");
+});
+```
+Use the Blade directive `@method('PATCH')` in your form to spoof the HTTP verb since browsers only support GET and POST.
+	### Deleting 
+
+Add a DELETE route to handle job deletion:
+
+```php
+Route::delete('/jobs/{id}', function ($id) {
+    $job = Job::findOrFail($id);
+    $job->delete();
+
+    return redirect('/jobs');
+});
+```
+
+Since forms cannot be nested, create a separate hidden form for deletion and link a button to submit it using the form attribute.
 # Sources  
 [[PHP-Laravel Sources]]
 
