@@ -14,6 +14,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 [MDN docs BigInt - lue le 03.12.2025](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 [MDN docs String - lue le 03.12.2025](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
+## Async 
+[MDN - Introducing asynchronus JavaScript - lue le 20.01.2026](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+[MDN - Using promises - lue le 20.01.2026](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 # Typescript
 ## Datatypes
 [Typescriptlang Void - lue le 03.12.2025](https://www.typescriptlang.org/docs/handbook/2/functions.html#void)
