@@ -1,8 +1,13 @@
 ## Key
 - create a protected route to generate the key 
 - using the user id in order to find the key faster.
-- 
+- Schema must contain the x-api-key. 
 
+create the structure
+1. Routes
+2. Schemas
+3. Controllers
+4. Models
 ### backend
 - [ ] **Créer table ApiKey dans Prisma**
   - [ ] Champs : id, key, owner, rateLimit, createdAt
