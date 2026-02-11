@@ -1,17 +1,24 @@
 ## Key
-- create a protected route to generate the key 
+- 
 - using the user id in order to find the key faster.
 - Schema must contain the x-api-key. 
 
-create the structure
-1. Routes
-2. Schemas
-3. Controllers
-4. Models
+Create the structure
+1. Routes -> ok
+2. Schemas -> ok
+3. Controllers -> ok
+4. Models -> ok
+
 ### backend
-- [ ] **Créer table ApiKey dans Prisma**
-  - [ ] Champs : id, key, owner, rateLimit, createdAt
-  - [ ] Migration de la base de données
+- [X] **Créer table ApiKey dans Prisma**
+  - [X] Champs : id, key, owner, rateLimit, createdAt
+  - [X] Migration de la base de données
+- [ ] create a protected route to generate the key 
+  - [x] Add the route in the user.routes.ts -> /api/user/generatekey ✅ 2026-02-11
+  - [X] Add a schemas
+  - [X] Add a Controllers
+  - [X] Add a Models
+  - [ ] Add the middle ware to check the validity of the key.
   
 - [ ] **Plugin verifyApiKey** (vérification dans SQLite)
   - [ ] Middleware pour vérifier x-api-key header
@@ -68,3 +75,12 @@ create the structure
 - [ ] Validation HTTPS pour webhooks
 - [ ] Logs des requêtes API
 - [ ] Gestion propre des erreurs
+
+
+Source
+https://www.reddit.com/r/node/comments/14hd7ku/how_do_i_issue_api_keys_for_my_users/
+https://www.freecodecamp.org/news/best-practices-for-building-api-keys-97c26eabfea9
+https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID
+https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa
+https://nodejs.org/api/crypto.html#cryptocreatehmacalgorithm-key-options
+https://github.blog/engineering/behind-githubs-new-authentication-token-formats/
