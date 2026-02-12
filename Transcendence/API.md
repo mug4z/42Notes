@@ -1,5 +1,5 @@
+
 ## Key
-- 
 - using the user id in order to find the key faster.
 - Schema must contain the x-api-key. 
 
@@ -13,11 +13,14 @@ Create the structure
 - [X] **Créer table ApiKey dans Prisma**
   - [X] Champs : id, key, owner, rateLimit, createdAt
   - [X] Migration de la base de données
-- [ ] create a protected route to generate the key 
+- [x] create a protected route to generate the key ✅ 2026-02-12
   - [x] Add the route in the user.routes.ts -> /api/user/generatekey ✅ 2026-02-11
   - [X] Add a schemas
   - [X] Add a Controllers
   - [X] Add a Models
+  - [x] Add the key into the Database with hash. ✅ 2026-02-12
+  - [ ] Si deja ajouter alors update. 
+  - [ ] Test si le hash est bien ajouter en DB.
   - [ ] Add the middle ware to check the validity of the key.
   
 - [ ] **Plugin verifyApiKey** (vérification dans SQLite)
@@ -84,3 +87,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID
 https://developer.mozilla.org/en-US/docs/Web/API/Window/btoa
 https://nodejs.org/api/crypto.html#cryptocreatehmacalgorithm-key-options
 https://github.blog/engineering/behind-githubs-new-authentication-token-formats/
+https://nodejs.org/api/crypto.html#cryptocreatehashalgorithm-options
