@@ -19,13 +19,13 @@ Create the structure
   - [X] Add a Controllers
   - [X] Add a Models
   - [x] Add the key into the Database with hash. ✅ 2026-02-12
-  - [ ] Si deja ajouter alors update. 
-  - [ ] Test si le hash est bien ajouter en DB.
-  - [ ] Add the middle ware to check the validity of the key.
+  - [x] Si deja ajouter alors update. ✅ 2026-02-15
+  - [x] Test si le hash est bien ajouter en DB. ✅ 2026-02-15
+  - [x] Add the middle ware to check the validity of the key. ✅ 2026-02-15
   
 - [ ] **Plugin verifyApiKey** (vérification dans SQLite)
-  - [ ] Middleware pour vérifier x-api-key header
-  - [ ] Query Prisma pour valider la clé
+  - [x] Middleware pour vérifier x-api-key header ✅ 2026-02-15
+  - [x] Query Prisma pour valider la clé ✅ 2026-02-15
   - [ ] Retour 401 si manquante, 403 si invalide
 
 - [ ] **Plugin @fastify/rate-limit** (100/min)
