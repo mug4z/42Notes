@@ -53,3 +53,5 @@ fetchPromise
 
 # Source
 [[Javascript-Typescript Source]]
+
+#Javascript #Async

@@ -56,3 +56,5 @@ const g: boolean = favoriteColors.green;
 ```
 # Source
 [[Javascript-Typescript Source]]
+
+#Typescript #Assertions

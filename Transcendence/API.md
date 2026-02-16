@@ -23,10 +23,10 @@ Create the structure
   - [x] Test si le hash est bien ajouter en DB. ✅ 2026-02-15
   - [x] Add the middle ware to check the validity of the key. ✅ 2026-02-15
   
-- [ ] **Plugin verifyApiKey** (vérification dans SQLite)
+- [x] **Plugin verifyApiKey** (vérification dans SQLite)
   - [x] Middleware pour vérifier x-api-key header ✅ 2026-02-15
   - [x] Query Prisma pour valider la clé ✅ 2026-02-15
-  - [ ] Retour 401 si manquante, 403 si invalide
+  - [x] Retour 401 si manquante, 403 si invalide
 
 - [ ] **Plugin @fastify/rate-limit** (100/min)
   - [ ] Installation : `npm install @fastify/rate-limit`

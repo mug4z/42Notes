@@ -39,3 +39,5 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 [What are the differences Between TypeScript’s satisfies operator and type assertions? - lue le 03.12.2025](https://stackoverflow.com/questions/78636946/what-are-the-differences-between-typescript-s-satisfies-operator-and-type-assert
 ## Combining Types
 [Typescriptlang Union Types - lue le 04.12.2025](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
+
+#Source #Javascript #Typescript 
