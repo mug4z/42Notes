@@ -35,11 +35,12 @@ Create the structure
   - [ ] Message d'erreur 429 personnalisé
 
 - [ ] **5 endpoints publics**
-  - [ ] GET `/api/public/stats/leaderboard`
-  - [ ] GET `/api/public/stats/user/:username`
-  - [ ] GET `/api/public/games`
-  - [ ] POST `/api/public/webhooks`
-  - [ ] DELETE `/api/public/webhooks/:id`
+- [x] pas besoin de faire du CRUD ✅ 2026-02-17
+  - [x] GET `/api/public/stats/leaderboard` ✅ 2026-02-17
+  - [x] GET `/api/public/stats/user/:username` ✅ 2026-02-17
+  - [x] GET `/api/public/games` ✅ 2026-02-17
+  - [x] POST `/api/public/webhooks` ✅ 2026-02-17
+  - [x] DELETE `/api/public/webhooks/:id` ✅ 2026-02-17
 
 - [ ] **Schémas JSON pour Swagger**
   - [ ] Définir schema pour chaque endpoint
