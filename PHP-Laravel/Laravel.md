@@ -7,7 +7,7 @@ Cool debuging -> https://github.com/barryvdh/laravel-debugbar
 - `props` anything that is not an attribute.
 - write :active="" means that everything inside "" should be treated as an expression.
 ## Routes and View
-Routes are used to load what ressource we need for a particular html action
+Routes are used to load what resource we need for a particular html action
 ```php
 Route::get('/', function () {
     return view('welcome');
@@ -97,13 +97,14 @@ Route::get('/jobs/{id}', function ($id) {
 ```
  
  ### Passing data to views
- ```php
+```php
 Route::get('/', function () {
     return view('home', [
         'greeting' => 'Hello', //$greeting will be accesible into the view
         'name' => 'Larry Robot',
     ]);
 });
+
 ```
 
 ### Autoloading, Namespaces and models

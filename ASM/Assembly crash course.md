@@ -38,7 +38,7 @@ The address of the next instruction is in a register
 - Some registers can be partialy access.
 ### Setting Registers
 Load data into registers with **mov**.
-```Assembly
+```assembly
 mov rax , 2
 ```
 this exemple load  the number 2 into the register rax.
@@ -48,7 +48,7 @@ mov copies the data don't move it.
 
 
 You can copy  data from one register to another.
-``` asm
+```assembly
 mov rbx, rax
 ```
 

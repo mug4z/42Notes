@@ -1,4 +1,4 @@
-Au debut de chaque script mettre un **shebang** -> #! a la **PREMIERE LIGNE** suivie du path de l'interpreteur shell
+eAu debut de chaque script mettre un **shebang** -> #! a la **PREMIERE LIGNE** suivie du path de l'interpreteur shell
 ```
 #!/bin/sh
 ```

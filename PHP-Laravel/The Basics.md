@@ -93,7 +93,7 @@ function filterByAuthor($books) {
 }
 
 ```
-### Lambda functrion (anonymous function)
+### Lambda function (anonymous function)
 ```php
   $test = function () {
         return 'TEST FUNCTION';
