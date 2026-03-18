@@ -1,0 +1,1 @@
+[Android fundamentals - lue le 18.03.2026](https://developer.android.com/guide/components/fundamentals)
