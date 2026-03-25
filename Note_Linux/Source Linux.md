@@ -48,3 +48,7 @@
 
 ## 
 [Diff aptidude et apt -- lue le 8.11.2023](https://blog.packagecloud.io/know-the-difference-between-apt-and-aptitude/#:~:text=Apt%20offers%20a%20command%2Dline,of%20all%20available%20official%20packages)
+
+## Tips and tricks
+[dot command](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#dot)
+
