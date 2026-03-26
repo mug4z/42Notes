@@ -29,7 +29,7 @@ Create the structure
   - [x] Retour 401 si manquante, 403 si invalide
 
 - [ ] **Plugin @fastify/rate-limit** (100/min)
-  - [ ] Installation : `npm install @fastify/rate-limit`
+  - [x] Installation : `npm install @fastify/rate-limit` ✅ 2026-02-19
   - [ ] Configuration avec Redis comme store
   - [ ] KeyGenerator basé sur API key
   - [ ] Message d'erreur 429 personnalisé

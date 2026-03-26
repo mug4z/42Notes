@@ -1,0 +1,4 @@
+- [ ] Bien mettre le code sur git de l'ecole
+- [ ] Bien verifier qu'il  y a pas de .env !!!!!!!!!!
+- [ ] Bien verifier que sa compile.
+- [ ] 
