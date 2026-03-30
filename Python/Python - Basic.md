@@ -1,4 +1,10 @@
-
+## Virtual environment
+Setup the virtual environment
+- `python -m venv myfirstproject`
+Start the virtual environment
+- `source myfirstproject/bin/activate`
+Stop the virtual environment
+- `deactivate`
 ## Function
 
 Definition

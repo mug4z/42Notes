@@ -10,5 +10,8 @@ run-time search path
 - patchelf
 - ldd
 - ldconfig
+## Interactive and non-interactive shell
+Interactive shell expect input.
+non-interactive shell are the one executed with a script.
 # Source
 [[Source Linux]]
