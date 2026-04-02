@@ -1,6 +1,9 @@
 - [x] python framework ✅ 2026-03-30
-- [ ] DB postgress
+- [x] DB postgress
 - [ ] CI CD gitlab (commit lint)
+- [ ] Clean architecture
+	- [ ] Domain Driven Design?
+- [ ] Check the Typescript code
 
 # Webframework
 
@@ -14,7 +17,6 @@ Seems good for what we need to do.
 Open source  relational database.
 
 # CI CD Gitlab
-
 
 
 # Source

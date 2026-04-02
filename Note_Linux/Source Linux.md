@@ -1,3 +1,7 @@
+
+## Shell expension
+https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html
+
 ## LVM
 [Definition -- lue le 01.11.2023](https://wiki.debian.org/LVM#Definitions)
 [Partition table -- lue le 01.11.2023](https://unix.stackexchange.com/questions/83781/understanding-partition-table-with-sda1-sda2-sda5)
