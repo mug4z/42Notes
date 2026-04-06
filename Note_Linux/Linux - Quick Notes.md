@@ -1,3 +1,5 @@
+>[!warning] Command 
+
 command `source` or `.` will execute the command or script inside the current environment.
 
 `.so` -> shared object linked at runtime.
@@ -34,5 +36,10 @@ challenge/run # Work if in the same directory as challenge
 `>&` redirect a file descriptor to another like, 2>& 1 redirect the standard error into the standard input.
 
 tee command duplicate the stdin into the stdout and file.
+
+`bg` resume a process to the background
+
+## Password 
+`/etc/shadow`.
 # Source
 [[Source Linux]]
