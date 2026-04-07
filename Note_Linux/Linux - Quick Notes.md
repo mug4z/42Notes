@@ -41,5 +41,9 @@ tee command duplicate the stdin into the stdout and file.
 
 ## Password 
 `/etc/shadow`.
+
+
+## Right
+Set User ID" (SUID) let the programm run as the owner user.
 # Source
 [[Source Linux]]
