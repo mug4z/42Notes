@@ -18,6 +18,18 @@ Open source  relational database.
 
 # CI CD Gitlab
 
+# Python
+https://peps.python.org/pep-0008/#introduction
+## Static type checkers
+pyright seems to be a one widely used.
+
+## Security scanning
+bandit
+
+
+
+
+
 
 # Source
 [[ft_matcha - source]]
