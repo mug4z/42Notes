@@ -24,12 +24,12 @@ https://peps.python.org/pep-0008/#introduction
 pyright seems to be a one widely used.
 
 ## Security scanning
-bandit
-
-
-
-
-
+bandit -> https://github.com/pycqa/bandit?tab=readme-ov-file
+SAST (Static application security testing)  -> https://docs.gitlab.com/user/application_security/sast/
+- For gitlab free user there is open-source scanners -> https://github.com/semgrep/semgrep
+SCA (Software Composition Analysis)
+- Indentifies the open source software in a codebase.
+https://www.blackduck.com/glossary/what-is-software-composition-analysis.html
 
 # Source
 [[ft_matcha - source]]
