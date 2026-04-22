@@ -10,8 +10,8 @@ Check the [Elo system](https://en.wikipedia.org/wiki/Elo_rating_system#Theory).
 A score that evaluate the fame of a person.
 ## How to base the score
 
-
-# Input
+# Operation
+## Input
 
 - User location
 - Tags
@@ -19,7 +19,7 @@ A score that evaluate the fame of a person.
 - Age
 - gender
 - Sexuality (undefined => bisexual)
-- Already connected ?
+- Already matched ?
 Example of input json
 ```json
 {
@@ -39,16 +39,16 @@ Example of input json
   "age":29,
   "gender":"male",
   "sexuality":"Bisexual",
-  "UserIdConnected":[1233,21312]
+  "UserIdMatched":[1233,21312]
 }
 ```
 
-# Transformation
+## Transformation
 - filter out based on the location.
-- Filter the first dataset based on the gender, sexuality and useridconnected. Filter out the one that are incompatible.
+- Filter the first dataset based on the gender, sexuality and useridmatched. Filter out the one that are incompatible.
 - Now the dataset container people that should match or not.
 
-# Output
+## Output
 
 ```json
 {
@@ -62,6 +62,11 @@ Example of input json
 ```
 
 
+# Events
+## Inbound
+Exemple: User data change
+## Outbound
+Exemple: 
 # Resources
 [indtroducing- JSON](https://www.json.org/json-en.html)
 [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
