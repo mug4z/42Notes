@@ -45,5 +45,11 @@ tee command duplicate the stdin into the stdout and file.
 
 ## Right
 Set User ID" (SUID) let the programm run as the owner user.
+
+## Read without cat
+
+```bash
+$(<file)
+```
 # Source
 [[Source Linux]]

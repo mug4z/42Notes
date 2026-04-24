@@ -46,7 +46,9 @@ Example of input json
 ## Transformation
 - filter out based on the location.
 - Filter the first dataset based on the gender, sexuality and useridmatched. Filter out the one that are incompatible.
-- Now the dataset container people that should match or not.
+- Filter out the one that are already matched with the current user.
+- Now the dataset contain people that should match or not.
+- Output the json.
 
 ## Output
 
@@ -65,8 +67,9 @@ Example of input json
 # Events
 ## Inbound
 Exemple: User data change
+If fame rating, tags, age, gender, sexuality the score would change.
 ## Outbound
-Exemple: 
+
 # Resources
 [indtroducing- JSON](https://www.json.org/json-en.html)
 [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
