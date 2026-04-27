@@ -70,6 +70,12 @@ Exemple: User data change
 If fame rating, tags, age, gender, sexuality the score would change.
 ## Outbound
 
+
+# Planification
+1. Generate test input.
+2. Apply algotithme
+3. Check the result
 # Resources
 [indtroducing- JSON](https://www.json.org/json-en.html)
 [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+[RandomCoords - API](https://www.randomcoords.com/docs/rest)
