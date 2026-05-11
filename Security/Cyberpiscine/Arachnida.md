@@ -3,6 +3,7 @@ CANT USE WGET OR SCRAPY
 # Ex01 - The spider
 Beautifulsoup DAMMIT
 ~~Will use C and libcurl~~ Python instead with requests lib.
+Use beautiful soup to parse html.
 
 ## Research 
 WTF means recursively download images in a URL ?

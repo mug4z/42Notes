@@ -20,6 +20,12 @@ Return type (with type hinting)
 def function_name(age: int) -> int:
 ```
 
+
+## Exception
+### Built-in Exceptions
+
+
 # Source
 [[Python - Source]]
+
 #basic #python 
