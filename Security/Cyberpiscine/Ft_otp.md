@@ -31,13 +31,16 @@ Use the  [**HTOP algorithm**](https://datatracker.ietf.org/doc/html/rfc4226#auto
            verify a received authenticator across s consecutive
            counter values.
 
-
+The K and C are hashed high-order endian (big endian)
+Test value -> https://datatracker.ietf.org/doc/html/rfc4226#page-32
 ### Generating HOTP Value
 
 - use hmac-sha-1, [python library ](https://docs.python.org/3/library/hmac.html)
 ## Sources
 https://datatracker.ietf.org/doc/html/rfc6238#autoid-1
 https://datatracker.ietf.org/doc/html/rfc4226#section-5.3
+
+https://crypto.stackexchange.com/questions/27474/how-does-the-hotp-dynamic-truncation-function-generalize-to-longer-hashes
 
 #security #cryptography #htop #TOTP
 #cyberpiscine
