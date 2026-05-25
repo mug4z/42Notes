@@ -1,4 +1,6 @@
 # Informations
+
+[How HOTP and TOTP work](https://www.youtube.com/watch?v=46AKWNOJ3-Y)
 ## Goal
 Store an initial password in file encrypted and being capable of generating a new one time password every time it is requested.
 It is aimed to implement a  [TOTP](https://datatracker.ietf.org/doc/html/rfc6238)(Time-based One-Time Password) 
@@ -36,6 +38,25 @@ Test value -> https://datatracker.ietf.org/doc/html/rfc4226#page-32
 ### Generating HOTP Value
 
 - use hmac-sha-1, [python library ](https://docs.python.org/3/library/hmac.html)
+
+### TOTP
+
+[Algorithm Requirements](https://datatracker.ietf.org/doc/html/rfc6238#section-3)
+
+#### Requirements 
+
+R6: The keys SHOULD be randomly generated or derived using key
+       derivation algorithms.
+       
+  R7: The keys MAY be stored in a tamper-resistant device and SHOULD be
+       protected against unauthorized access and usage.
+#### Notations
+- X: represent the time step in seconds (default X = 30 seconds)
+- T0: Unix start time, default is the Unix epoch
+- T: integer that represents the number of time steps between the initial counter time T0 and the current Unix time. ( T = (Current Unix time - T0) / X ), if the result should get 1,9 floor it to 1.
+#### Description
+TOTP = HOTP(K, T)
+
 ## Sources
 https://datatracker.ietf.org/doc/html/rfc6238#autoid-1
 https://datatracker.ietf.org/doc/html/rfc4226#section-5.3

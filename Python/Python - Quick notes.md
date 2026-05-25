@@ -1,5 +1,10 @@
 
+## List
 
+```python
+mylist = ["apple", "banana", "cherry"]
+```
+https://www.w3schools.com/python/python_lists.asp
 ## Sequence of byte
 ```python
 bytes = b'LOL'
@@ -27,3 +32,11 @@ hmac hash as bytes array
     hashed1.digest()
 ```
 
+## Import
+**Python module** is a file that has a `.py` extension
+**Python package** is any folder that has modules inside it.
+an `__init__.py` make sure that the direcory is viewed as a packages.
+
+https://realpython.com/absolute-vs-relative-python-imports/
+
+#python #QuickNotes 
