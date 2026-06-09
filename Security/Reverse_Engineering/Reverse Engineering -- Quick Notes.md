@@ -1,3 +1,9 @@
+## Dynamic Analysis
+Execute the malware in a sandbox and record every possible actions
+
+## Static Analysis
+Read the source code, usually assembly.
+
 
 In contrast of  "Forward Engineering" aka the process of building a programm.
 
