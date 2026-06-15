@@ -1,0 +1,20 @@
+# Informations
+
+## Goal
+Perform an ARP poisoning in both direction (full duplex).
+When the attack is stopped (CTRL+C), the ARP tables will be restored.
+The files name exchange between a client and a FTP server should be displayed in real time.
+
+## Test
+You have to prepare a test suite using an FTP connection in addition to the other tests.
+## Arguments
+ - `<IP-src>`
+ - `<MAC-src>`
+ - `<IP-target>`
+ - `<MAC-target>`
+## Libraries
+- libpcap: capture, parse and craft network packets. [PcapPlusPlus](https://pcapplusplus.github.io/)
+	- For using the C++ variant need the libpcap.
+## Searches
+- cmake what the fuck ?
+- ARP poisoning WTF ?
