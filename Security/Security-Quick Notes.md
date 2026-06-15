@@ -8,3 +8,6 @@ if an `https://` is found then it could mean that the
 
 ## What to learn
 Seeing a lot of demand for network foundations and/or specilisation.
+
+
+les **principes et bonnes pratiques issues des normes ISO/IEC 2700x**
