@@ -15,5 +15,5 @@ Will use CPP
 piexif
 
 
-
+https://gist.github.com/AdamDimech/6c83e43c1a70a82e10778b279b3917e5
 
