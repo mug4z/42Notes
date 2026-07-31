@@ -16,9 +16,15 @@ You have to prepare a test suite using an FTP connection in addition to the othe
 - libpcap: capture, parse and craft network packets. [PcapPlusPlus](https://pcapplusplus.github.io/)
 	- For using the C++ variant need the libpcap.
 ## Searches
-- cmake what the fuck ?
-- ARP poisoning WTF ?
+- cmake what the fuck ? -> DONE
+- ARP poisoning WTF ? -> DONE
+
 ### PcapPlusPlus
+`pcpp::Ethlayer` `pcpp::ArpLayer`  `pcpp::ArpReply`
+
+`pcpp::Packet::addLayer()`
+
 
 https://pcapplusplus.github.io/docs/tutorials/intro
 https://github.com/seladb/PcapPlusPlus/tree/v25.05/Examples/Tutorials/Tutorial-HelloWorld
+https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
