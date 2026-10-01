@@ -24,7 +24,12 @@ You have to prepare a test suite using an FTP connection in addition to the othe
 
 `pcpp::Packet::addLayer()`
 
+### Warnings
+The arp tables of the man in the middle machine must know the targets machine in the arp table.
+
+
 
 https://pcapplusplus.github.io/docs/tutorials/intro
 https://github.com/seladb/PcapPlusPlus/tree/v25.05/Examples/Tutorials/Tutorial-HelloWorld
 https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
+https://linuxvox.com/blog/check-arp-table-linux/#fundamental-concepts-of-the-arp-table-in-linux
